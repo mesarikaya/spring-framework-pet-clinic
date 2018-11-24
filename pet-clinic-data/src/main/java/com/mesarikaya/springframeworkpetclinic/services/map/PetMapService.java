@@ -2,9 +2,11 @@ package com.mesarikaya.springframeworkpetclinic.services.map;
 
 import com.mesarikaya.springframeworkpetclinic.model.Pet;
 import com.mesarikaya.springframeworkpetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetMapService extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
 
     @Override
