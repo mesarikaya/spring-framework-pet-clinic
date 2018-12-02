@@ -2,6 +2,7 @@ package com.mesarikaya.springframeworkpetclinic.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Table(name="pets")
@@ -19,6 +20,9 @@ public class Pet extends BaseEntity{
 
     @Column(name="name")
     private String name;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    private Set<Visit> visits;
 
     public PetType getPetType() {
         return petType;
