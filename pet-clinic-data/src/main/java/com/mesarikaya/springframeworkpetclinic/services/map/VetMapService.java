@@ -4,11 +4,13 @@ import com.mesarikaya.springframeworkpetclinic.model.Speciality;
 import com.mesarikaya.springframeworkpetclinic.model.Vet;
 import com.mesarikaya.springframeworkpetclinic.services.SpecialtyService;
 import com.mesarikaya.springframeworkpetclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class VetMapService extends AbstractMapService<Vet,Long> implements VetService {
 
     private final SpecialtyService specialtyService;
@@ -18,7 +20,7 @@ public class VetMapService extends AbstractMapService<Vet,Long> implements VetSe
     }
 
     @Override
-    public Vet findByLastName(String lasName) {
+    public Vet findByLastName(String lastName) {
         return null;
     }
 
