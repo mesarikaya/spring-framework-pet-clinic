@@ -41,8 +41,8 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
     public Owner save(Owner object) {
 
         if (object != null){
-            if(object.getPet()!=null){
-                object.getPet().forEach(pet->{
+            if(object.getPets()!=null){
+                object.getPets().forEach(pet->{
                     if(pet.getPetType() != null){
                         if(pet.getPetType().getId() == null){
                             pet.setPetType(petTypeService.save(pet.getPetType()));
