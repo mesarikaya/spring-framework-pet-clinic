@@ -13,7 +13,7 @@ class OwnerMapServiceTest {
 
     OwnerMapService ownerMapService;
     final Long ownerID = 1L;
-    final String lastName = "TestLastName"
+    final String lastName = "TestLastName";
 
     @BeforeEach
     void setUp() {
